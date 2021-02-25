@@ -34,7 +34,7 @@
       <span id="instructions-button">Selecciona tus archivos</span>
     </label>
     <input id="file-input" name="xml_files" type="file" multiple accept="text/xml">
-    <input src="{{ url_for('static', path='/send-icon.svg') }}" id="submit-button" name="submit" alt="submit" type="image">
+    <input class="hidden" src="{{ url_for('static', path='/send-icon.svg') }}" id="submit-button" name="submit" alt="submit" type="image">
   </form>
   <div class="file-list-container">
     <ul id="file-list" class="file-list-grid">

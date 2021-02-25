@@ -1,12 +1,20 @@
 const updateFileListUi = (filenames) => {
   const fileList = document.getElementById("file-list");
 
+  // Delete actual list
+  fileList.textContent = "";
+
+  // Insert new file list
   filenames.forEach((filename) => {
     const itemNode = document.createElement("li");
     const textNode = document.createTextNode(filename.substring(0, 6) + "...");
     itemNode.appendChild(textNode);
     fileList.appendChild(itemNode);
   });
+
+  // Insert submit button
+  const submitBtn = document.getElementById("submit-button");
+  submitBtn.classList.remove("hidden");
 };
 
 const updateInstructionsButton = (filenames) => {
