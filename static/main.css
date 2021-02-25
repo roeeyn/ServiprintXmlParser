@@ -175,3 +175,29 @@ th {
 .title > h1 {
   margin: 22px 22px 0 22px;
 }
+
+@media (max-width: 790px) {
+  main {
+    min-width: 390px;
+  }
+
+  .main-wrapper {
+    font-size: 0.8em;
+  }
+
+  table {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 600px) {
+  table {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 510px) {
+  .main-wrapper {
+    font-size: 0.6em;
+  }
+}
