@@ -39,11 +39,15 @@
       <form action="/upload-xmls/" enctype="multipart/form-data" method="post">
         <label id="file-input-button" for="file-input">
           <img alt="upload-icon" src="{{ url_for('static', path='/upload-icon.svg' ) }}" />
-          <span>Selecciona tus archivos</span>
+          <span id="instructions-button">Selecciona tus archivos</span>
         </label>
         <input id="file-input" name="xml_files" type="file" multiple accept="text/xml">
         <input src="{{ url_for('static', path='/send-icon.svg') }}" id="submit-button" name="submit" alt="submit" type="image" >
       </form>
+      <div class="file-list-container">
+        <ul id="file-list" class="file-list-grid">
+        </ul>
+      </div>
     </main>
   </section>
 

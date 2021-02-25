@@ -35,6 +35,7 @@ main {
   background: hsl(201, 66%, 99%);
   border-radius: 22px;
   margin: 22px;
+  max-height: 60vh;
   -webkit-box-shadow: 1px 3px 16px -8px hsl(201,67%,20%);
   box-shadow: 1px 3px 16px -8px hsl(201,67%,20%);
   display: flex;
@@ -70,7 +71,7 @@ th {
   color: hsl(201, 66%, 99%);
   font-family: 'Montserrat', sans-serif;
   padding: 12px;
-  margin: 50px 0;
+  margin: 50px 0 22px 0;
   display: flex;
   align-items: center;
   border-radius: 12px;
@@ -139,6 +140,17 @@ th {
 
 .csv-columns-wrapper>li {
   font-size: 1em;
+}
+
+.file-list-container {
+  overflow-y: scroll;
+  margin: 22px 90px 22px 0;
+  width: 90%;
+}
+
+.file-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 }
 
 .instructions-wrapper>li {
