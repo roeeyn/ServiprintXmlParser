@@ -14,6 +14,16 @@ For installing the dependencies you need to first `create a virtual environment`
 python -m venv xml-parser
 ```
 
+### Activate the Virtual Env
+
+```shell
+# For Macos/Linux
+source ./venv/bin/activate
+
+# For Windows
+./venv/bin/activate.bat
+```
+
 ### Installing Dependencies
 
 Install the dependencies
