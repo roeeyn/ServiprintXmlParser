@@ -10,9 +10,11 @@ from fastapi.templating import Jinja2Templates
 from src.csv_creation import create_csv_file, fieldnames
 from src.xml_processing import create_csv_row_from_xml
 
+# Try to get the environment variable PORT, and if it doesn't exist it defaults to 5000
 port = getenv("PORT", 5000)
 app = FastAPI()
 
+# Create an 'independent' routing for static files, such as CSS, JS, etc
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
@@ -20,8 +22,13 @@ templates = Jinja2Templates(directory="templates")
 
 @app.post("/upload-xmls/")
 async def process_xmls(xml_files: List[UploadFile] = File(...)):
+    # Create a CSV row from each one of the XML files
     processed_files = [create_csv_row_from_xml(xml_file) for xml_file in xml_files]
+
+    # Use this list of CSV rows to create the CSV file
     csv_content = create_csv_file(processed_files)
+
+    # Return it with a special media type, so it can be downloaded
     return Response(content=csv_content, media_type="text/csv")
 
 
