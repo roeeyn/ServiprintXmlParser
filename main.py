@@ -28,7 +28,7 @@ async def process_xmls(xml_files: List[UploadFile] = File(...)):
 @app.get("/", response_class=HTMLResponse)
 async def main(request: Request):
     return templates.TemplateResponse(
-        "index.html", {"request": request, "csv_columns": fieldnames}
+        "files_form.html", {"request": request, "csv_columns": fieldnames}
     )
 
 

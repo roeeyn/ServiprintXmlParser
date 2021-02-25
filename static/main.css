@@ -4,14 +4,14 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
+  flex-direction: column;
+  max-height: 860px;
   align-items: center;
   position: relative;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  right: 50%;
+  flex: 1;
 }
 
 h1,
@@ -36,6 +36,7 @@ main {
   border-radius: 22px;
   margin: 22px;
   max-height: 60vh;
+  min-width: 520px;
   -webkit-box-shadow: 1px 3px 16px -8px hsl(201,67%,20%);
   box-shadow: 1px 3px 16px -8px hsl(201,67%,20%);
   display: flex;
@@ -128,7 +129,9 @@ th {
 }
 
 .main-wrapper {
+  flex: 8;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .csv-columns-wrapper {
@@ -168,7 +171,12 @@ th {
 }
 
 .title {
-  position: absolute;
-  top: 0;
-  left: 50%
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.title > h1 {
+  margin: 22px 22px 0 22px;
 }
