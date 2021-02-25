@@ -6,7 +6,7 @@ This project is intended to help in how the invoices are processed. You upload a
 
 ## Project Setup
 
-### Create a Virtual Env
+### Create a Virtual Environment
 
 For installing the dependencies you need to first `create a virtual environment`
 
@@ -14,7 +14,9 @@ For installing the dependencies you need to first `create a virtual environment`
 python -m venv xml-parser
 ```
 
-### Activate the Virtual Env
+### Activate the Virtual Environment
+
+Then you need to activate your recently created virtual environment
 
 ```shell
 # For Macos/Linux
