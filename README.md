@@ -2,6 +2,8 @@
 
 This project is intended to help in how the invoices are processed. You upload a bunch of XMLs and the platform returns a CSV which contains all the condensed info of this XMLs, so it will be easier to read.
 
+See the live project [here](https://serviprint-xml-parser.herokuapp.com/)
+
 ![Sample Gif](https://media.giphy.com/media/vpd79Y5fcxQivinMm5/giphy.gif)
 
 ## Project Setup
