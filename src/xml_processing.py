@@ -13,7 +13,11 @@ def get_elements_from_xml(
         attr_dict = {}
 
         for attr in attributes:
-            attr_dict[attr] = el.attributes[attr].value
+            attr_dict[attr] = (
+                el.attributes[attr].value
+                if attr in el.attributes
+                else f"{attr} no disponible"
+            )
 
         if get_all:
             result.append(attr_dict)
@@ -38,6 +42,7 @@ def create_csv_row_from_xml(raw_file):
     concepts_dict = {
         f"Concepto {idx + 1}": concept.get("Descripcion")
         for idx, concept in enumerate(concepts)
+        if idx < 3  # We only want the 3 first concepts
     }
 
     return {**emissor, **invoice, **concepts_dict}
