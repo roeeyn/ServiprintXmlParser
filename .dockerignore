@@ -1,0 +1,8 @@
+.gitignore
+.git/
+.jsbeautifyrc
+*.ipynb
+*/.ipynb_checkpoints
+README.md
+Dockerfile
+.dockerignore
